@@ -83,61 +83,141 @@
 
 <body style="font-size:100%;background-color: #e6e6e6;">
 
-<div class="container">
-    <hr>
-    <p class="welcome"><b>Welcome to Eskişehir</b></p>
-    
-    <div class="table-responsive">
-        <table class="table" style="width:100%;background-color: white;">
-      		<tr>
-        		<td style="text-align:center;"><a href="home.html">Home</a><br><img src="home-pointer.jpg" style="width:6.25em;height:6.25em;"></td>
-        		<td style="text-align:center;"><a href="localdishes.html">Local Dishes</a><br><img src="localdishes.jpg" style="width:6.25em;height:6.25em;"></td>
-        		<td style="text-align:center;"><a href="historicalplaces.html">Historical Places</a><br><img src="historicalplaces.jpg" style="width:6.25em;height:6.25em;"></td>
-                <td style="text-align:center;"><a href="usefullinks.html">Useful Links</a><br><img src="usefullinks.jpg" style="width:6.25em;height:6.25em;"></td>
-                <td style="text-align:center;"><a href="aboutme.html">About Me</a><br><img src="aboutme.jpg" style="width:6.25em;height:6.25em;"></td>
-                <td style="text-align:center;"><a href="contactme.html">Contact Me</a><br><img src="contactme.jpg" style="width:6.25em;height:6.25em;"></td>
-                <td style="font-size:1.25em;color:red;text-align:center;"><b>Registration</b><br><img src="registration.jpg" style="width:6.25em;height:6.25em;"></td>
-      		</tr>
-        </table>
+    <div class="container">
+        <hr>
+        <p class="welcome"><b>Welcome to Eskişehir</b></p>
+        
+        <div class="table-responsive">
+            <table class="table" style="width:100%;background-color: white;">
+          		<tr>
+            		<td style="text-align:center;"><a href="home.html">Home</a><br><img src="home-pointer.jpg" style="width:6.25em;height:6.25em;"></td>
+            		<td style="text-align:center;"><a href="localdishes.html">Local Dishes</a><br><img src="localdishes.jpg" style="width:6.25em;height:6.25em;"></td>
+            		<td style="text-align:center;"><a href="historicalplaces.html">Historical Places</a><br><img src="historicalplaces.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="usefullinks.html">Useful Links</a><br><img src="usefullinks.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="aboutme.html">About Me</a><br><img src="aboutme.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="contactme.html">Contact Me</a><br><img src="contactme.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="font-size:1.25em;color:red;text-align:center;"><b>Registration</b><br><img src="registration.jpg" style="width:6.25em;height:6.25em;"></td>
+          		</tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+
+        <form name="reg" action="calculator.html" method="GET">
+        <!-- POST method doesn't work in GitHub -->
+    	<fieldset id="frame">
+        <p style="text-indent:0em;text-align:left">
+    		<label for="name"><i style="color:red">*</i>Name:<br></label> <br> <input class="reg" type="text" name="name" id="name" pattern="^[ A-Za-z]+$" title="only letter characters" placeholder="eng characters" required><br><br>
+    		<label for="sName"><i style="color:red">*</i>Surname:<br></label> <br> <input class="reg" type="text" name="surname" id="sName" pattern="^[ A-Za-z]+$" title="only letter characters" placeholder="eng characters" required><br><br>
+    		<label for="bDate"><i style="color:red">*</i>Birth Date:<br></label> <br> <input class="reg" type="text" name="birthDate" id="bDate" pattern="[0-9]+\.[0-9]+\.[0-9]{4}$" placeholder="dd.MM.yyyy" required><br><br>
+    		<label for="eMail"><i style="color:red">*</i>E-mail:<br></label> <br> <input class="reg" type="email" name="email" id="eMail" pattern="[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="not a valid e-mail" placeholder="userName@example.com / userName@example.edu.tr" required><br><br>
+    		<label for="pw"><i style="color:red">*</i>Password:<br></label><br><input class="reg" type="password" name="password" id="pw" pattern="(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.*[A-Z]).{6,15}" title="Must contain at least one number, one uppercase and one special character, length of 6 to 15 characters" placeholder="UPER*num_56 length:6 to 15" required><br><br>
+
+    		<label for="gender">Gender:<br></label> 
+      			<input type="radio" name="gender" id="gender" checked>Male
+      			<input type="radio" name="gender" id="gender">Female<br><br>
+                
+            Interests: <br>
+            	<input type="checkbox" name="oop">OOP<br>
+    			<input type="checkbox" name="html">HTML<br>
+                <input type="checkbox" name="database">Database<br>
+                <input type="checkbox" name="android">Android<br>
+                <input type="checkbox" name="graph">Graphical Design<br>
+                <input type="checkbox" name="arduino">Arduino<br><br>
+            <button style="width:6em; height:2.5em;font-family:century gothic;color:#484848;" type="reset">Reset</button>
+            <button style="width:6em; height:2.5em;font-family:century gothic;color:#484848;" type="submit" onclick="controls()">Submit</button> 
+        </p>
+       	</fieldset>
+    	</form>
+
     </div>
 
-    <hr>
-    <br>
+    <script>
+        function controls(){
 
-    <form action="submit.html" method="GET">
-    <!-- POST method doesn't work in GitHub -->
-	<fieldset id="frame">
-    <p style="text-indent:0em;text-align:left">
-		<label for="name"><i style="color:red">*</i>Name:<br></label> <br> <input class="reg" type="text" name="name" id="name" required><br><br>
-		<label for="sName"><i style="color:red">*</i>Surname:<br></label> <br> <input class="reg" type="text" name="surname" id="sName" required><br><br>
-		<label for="bDate">Birth Date:<br></label> <br> <input class="reg" type="date" name="birthDate" id="bDate"><br><br>
-		<label for="eMail"><i style="color:red">*</i>E-mail:<br></label> <br> <input class="reg" type="email" name="email" id="eMail" required><br><br>
-		<label for="password"><i style="color:red">*</i>Password:<br></label><br><input class="reg" type="password" name="password" id="password" required><br><br>
+            var msg = "";
+            userError = false;
 
-		<label for="gender">Gender:<br></label> 
-  			<input type="radio" name="gender" id="gender" checked>Male
-  			<input type="radio" name="gender" id="gender">Female<br><br>
-            
-        Interests: <br>
-        	<input type="checkbox" name="oop">OOP<br>
-			<input type="checkbox" name="html">HTML<br>
-            <input type="checkbox" name="database">Database<br>
-            <input type="checkbox" name="android">Android<br>
-            <input type="checkbox" name="graph">Graphical Design<br>
-            <input type="checkbox" name="arduino">Arduino<br><br>
-        <button style="width:6em; height:2.5em;font-family:century gothic;color:#484848;" type="reset">Reset</button>
-        <button style="width:6em; height:2.5em;font-family:century gothic;color:#484848;" type="submit">Submit</button> 
-    </p>
-   	</fieldset>
-	</form>
+// -----FULL EMPTY-----
 
-</div>
+            if(document.reg.name.value == "" || document.reg.surname.value == "" || document.reg.birthDate.value == "" || document.reg.email.value == "" || document.reg.password.value == ""){
+                msg += "All text fields (name, surname, birth date, e-mail and password) should be filled.\n\n";
+                userError = true;
+            }
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"></script>
+// -----NAME SURNAME-----  
+
+            var pattern =  /^[ A-Za-z]+$/;
+            if(document.reg.name.value.match(pattern) && document.reg.surname.value.match(pattern)){}
+            else{
+                msg += "Both Name and Surname fields should consist of only english letter characters, if you have more than one name or surname 'space's also can be used.\n\n";
+                userError = true;
+            }
+
+// -----DATE-----
+
+            var DoB = document.reg.birthDate.value;
+            if(DoB.substring(2,3) == "." && DoB.substring(5,6) == "." && DoB.length == 10){}
+            else{
+                msg += "Invalid date format. Valid format is dd.MM.yyyy\n\n";
+                userError = true;
+            }
+            if(DoB.substring(3,5) == 01 || DoB.substring(3,5) == 03 || DoB.substring(3,5) == 05 || DoB.substring(3,5) == 07 || DoB.substring(3,5) == 08 || DoB.substring(3,5) == 10 || DoB.substring(3,5) == 12){
+                if(DoB.substring(0,2) > 31){
+                    msg += "An impossible date is entered! Please check it.\n\n";
+                    userError = true;
+                }
+            }
+            else if(DoB.substring(3,5) == 02){
+                if(DoB.substring(6,10) % 4 == 0){
+                    if(DoB.substring(0,2) > 29){
+                        msg += "An impossible date is entered! Please check it.\n\n";
+                        userError = true;
+                    }
+                }
+                else{
+                    if(DoB.substring(0,2) > 28){
+                        msg += "An impossible date is entered! Please check it.\n\n";
+                        userError = true;
+                    }
+                }
+            }
+            else{
+                if(DoB.substring(0,2) > 30){
+                    msg += "An impossible date is entered! Please check it.\n\n";
+                    userError = true;
+                }
+            }
+
+// -----EMAIL-----
+
+            pattern = /[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+            if(document.reg.email.value.match(pattern)){}
+            else{
+                msg += "E-mail field should be like userName@domain.com or userName@domain.edu.tr.\n\n";
+                userError = true;
+            }
+
+// -----PASSWORD-----
+
+            pattern = /(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.*[A-Z]).{6,15}/;
+            if(document.reg.password.value.match(pattern)){}
+            else{
+                msg += "Password field should contain at least one number, one uppercase and one special character and length should be in range 6 to 15 characters.\n\n";
+                userError = true;
+            }
+
+// -----SUCCESS-----
+
+            if(userError == false){
+                msg = "Registration is successfuly completed.";
+            }
+
+
+            alert(msg);
+        }
+    </script>
 
 </body>
 

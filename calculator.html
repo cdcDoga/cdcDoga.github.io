@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Congrats!</title>
+    
+    <style>
+
+        p{
+        text-indent:0.75em;
+        text-align:center;
+        font-family:century gothic;
+        font-size:0.9em;
+        color:#686868;
+        }
+
+        a{
+        color:#686868;
+        font-family:century gothic;
+        }
+
+        a:hover{
+            color:#ff3333;
+            cursor:pointer;
+        }
+
+        p.welcome{
+            border-right-style: solid;
+            border-right-width: 0.5em;
+            border-right-color: red;
+            border-left-style: solid;
+            border-left-width: 0.5em;
+            border-left-color: red;
+            background-color: #ffb3b3;
+            border-radius: 1em;
+            font-family: comic sans ms;
+            color: black;
+            font-size: 1.5em;
+            background-attachment: fixed;
+            font-variant: small-caps;
+        }
+
+        #calc{
+          position: relative;
+          background-color: #1e1e2f;
+          width: 14.7em;
+          border: 2px solid black;
+          border-radius: 0.75em;
+          margin: 0em auto;
+          padding: 1.25em 1.25em 1.25em 1.25em;
+        }
+
+        input[type = text] {
+          position: relative;
+          display: block;
+          width: 95%;
+          margin: 0.3125em auto;
+          padding: 0.625em;
+          box-shadow: 0.25em 0em 0.75em black inset;
+        }
+
+        input[class = rounded]{
+            background-color: #33334d;
+            color: white;
+            font-family: Courier New;
+        }
+
+        input[type=button]:hover {
+          background-color: #666699;
+        }
+
+        input.rounded[type = text]{
+            background-color: #e6e6e6;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body style="font-size:100%;background-color: #e6e6e6;">
+
+    <div class="container">
+        <hr>
+        <p class="welcome"><b>Now You Are Exactly In Eskişehir!</b></p>
+        
+        <div class="table-responsive">
+            <table class="table" style="width:100%;background-color: white;">
+                <tr>
+                    <td style="text-align:center;"><a href="home.html">Home</a><br><img src="home-pointer.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="localdishes.html">Local Dishes</a><br><img src="localdishes.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="historicalplaces.html">Historical Places</a><br><img src="historicalplaces.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="usefullinks.html">Useful Links</a><br><img src="usefullinks.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="aboutme.html">About Me</a><br><img src="aboutme.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="text-align:center;"><a href="contactme.html">Contact Me</a><br><img src="contactme.jpg" style="width:6.25em;height:6.25em;"></td>
+                    <td style="font-size:1.25em;color:red;text-align:center;"><b>Registration</b><br><img src="registration.jpg" style="width:6.25em;height:6.25em;"></td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+
+        <p>:) Thanks for registration (:</p>
+
+        
+        <div id="calc"> 
+            <form name="calculator">
+                <input class="rounded" type="text" id="screen" name="process"> <br>
+
+                <input class="rounded" type="button" value="  C  " style="background-color: #ff6600" onclick="calculator.process.value = ''">
+                <input class="rounded" type="button" value=" 1/x " onclick="calculator.process.value += '1/'">
+                <input class="rounded" type="button" value="  ◄ " onclick="backspace(calculator.process.value)"> <br>
+
+                <input class="rounded" type="button" value=" 7 " onclick="calculator.process.value += '7'">
+                <input class="rounded" type="button" value=" 8 " onclick="calculator.process.value += '8'">
+                <input class="rounded" type="button" value=" 9 " onclick="calculator.process.value += '9'">
+                <input class="rounded" type="button" value=" + " style="background-color: #0066cc" onclick="calculator.process.value += '+'"> <br>
+
+                <input class="rounded" type="button" value=" 4 " onclick="calculator.process.value += '4'">
+                <input class="rounded" type="button" value=" 5 " onclick="calculator.process.value += '5'">
+                <input class="rounded" type="button" value=" 6 " onclick="calculator.process.value += '6'">
+                <input class="rounded" type="button" value=" - " style="background-color: #0066cc" onclick="calculator.process.value += '-'"> <br>
+
+                <input class="rounded" type="button" value=" 1 " onclick="calculator.process.value += '1'">
+                <input class="rounded" type="button" value=" 2 " onclick="calculator.process.value += '2'">
+                <input class="rounded" type="button" value=" 3 " onclick="calculator.process.value += '3'">
+                <input class="rounded" type="button" value=" x " style="background-color: #0066cc" onclick="calculator.process.value += '*'"> <br>
+
+                <input class="rounded" type="button" value=" . " onclick="calculator.process.value += '.'">
+                <input class="rounded" type="button" value=" 0 " onclick="calculator.process.value += '0'">
+                <input class="rounded" type="button" value=" = " style="background-color: #0066cc" onclick="calculator.process.value = eval(calculator.process.value)">
+                <input class="rounded" type="button" value=" / " style="background-color: #0066cc" onclick="calculator.process.value += '/'"> <br>
+                
+            </form>
+        </div>
+
+
+        <br>
+        
+    </div>
+
+    <script>
+
+        function backspace(s){
+            calculator.process.value = s.substring(0, s.length - 1);
+        }
+
+    </script>
+
+</body>
+
+</html>
