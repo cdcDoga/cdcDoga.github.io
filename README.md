@@ -1,5 +1,5 @@
 # cdcDoga.github.io
-a website for publicity of Eskişehir, Turkey and a calculator in last page
+a website for publicity of Eskişehir, Turkey and a calculator after registration last page
 
 >> A responsive website for knowing Eskişehir better.
 
